@@ -181,7 +181,6 @@ void QuickSort::randomizedSort() {
 // Generates Random Pivot, swaps pivot with
 // end element and calls the partition function
 int QuickSort::getRandomPivot(vector<int>& arr, int left, int right, int &steps) {
-	srand(time(NULL));
 	int random = left + rand() % (right - left);
 	steps++;
 	swap(random, right, arr, steps);

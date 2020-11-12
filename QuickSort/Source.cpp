@@ -12,6 +12,7 @@ void run50Random(QuickSort &run, bool random);
 int main() {
 	srand((unsigned)time(0));
 	QuickSort run = QuickSort();
+	// regular quicksort
 	runForN(100, run, false);
 	runForN(200, run, false);
 	runForN(300, run, false);
@@ -20,6 +21,16 @@ int main() {
 	runForN(1000, run, false);
 	runForN(4000, run, false);
 	runForN(10000, run, false);
+
+	// randomized quicksort
+	runForN(100, run, true);
+	runForN(200, run, true);
+	runForN(300, run, true);
+	runForN(400, run, true);
+	runForN(500, run, true);
+	runForN(1000, run, true);
+	runForN(4000, run, true);
+	runForN(10000, run, true);
 	return 0;
 }
 
