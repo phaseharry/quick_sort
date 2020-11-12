@@ -16,7 +16,8 @@ private:
 	vector<int> generateRandom(int newSize);
 	vector<int> setArr(int initArr, int newSize);
 	void swap(int idx1, int idx2, vector<int>& heap, int &steps);
-	int partition(vector<int>& arr, int low, int high, int &steps);
+	int partition(vector<int>& arr, int left, int right, int &steps);
+	int getRandomPivot(vector<int>& arr, int left, int right, int &steps);
 	long long totalDurationInMicroSecs;
 	int totalSteps;
 	int size;
@@ -26,8 +27,9 @@ public:
 	int getSize() const;
 	long long getTotalTime();
 	int getTotalSteps();
-	void sort();
-	void sortHelper(vector<int>& array, int startIdx, int endIdx, int &steps);
+	void sort(bool sort);
+	void randomizedSort();
+	void sortHelper(vector<int>& array, int startIdx, int endIdx, int &steps, bool random);
 	void printArr() const;
 	void resetArr();
 	void resetFiftyInstancesTracker();
